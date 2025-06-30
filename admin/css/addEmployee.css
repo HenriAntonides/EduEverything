@@ -1,0 +1,60 @@
+body {
+    background-color: aqua;
+    color: #222;
+}
+
+.employeeForm {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.employeeForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.employeeForm label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.employeeForm input,
+.employeeForm select,
+.employeeForm button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.employeeForm button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.employeeForm button:hover {
+    background-color: #0056b3;
+}
+
+.message.success {
+    color: green;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.message.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}

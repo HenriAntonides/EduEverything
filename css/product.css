@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    color: #111;
+}
+
+main.product-detail {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    display: flex;
+    gap: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.product-detail img {
+    max-width: 450px;
+    width: 100%;
+    object-fit: contain;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.product-detail h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-detail .price {
+    font-size: 24px;
+    color: #b12704;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-detail p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.product-detail button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #3665f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.2s ease;
+}
+
+.product-detail button:hover {
+    background-color: #244ec9;
+}
+
+.info-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.seller {
+    flex: 0 0 280px;
+    background-color: #f9f9f9;
+    padding: 16px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.seller strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #222;
+    font-weight: 600;
+}
+
+.seller span {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+    main.product-detail {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .product-detail img {
+        max-width: 100%;
+    }
+}
+
+.soldNotice {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.carouselContainer {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carouselImg {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carouselImg img {
+    min-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.carouselBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.carouselBtn.prev {
+    left: 10px;
+}
+
+.carouselBtn.next {
+    right: 10px;
+}

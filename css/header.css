@@ -1,0 +1,136 @@
+/* This is the style needed for the header. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: aqua;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.topbar {
+    background: aqua;
+    padding: 12px 20px;
+    border-bottom: 3px solid #000000;
+}
+
+.headerCont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0046be;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    color: #333;
+}
+
+.searchBar {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+    display: flex;
+}
+
+.searchBar input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.searchBar button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background: #0074d9;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.searchBar button:hover {
+    background-color: #009ac0;
+}
+
+.headerNav a {
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav.navbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav.navbar a {
+    text-decoration: none;
+    color: #3665f3;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+nav.navbar a:hover {
+    background-color: #f0f0f0;
+}
+
+nav.navbar .cartForm {
+    margin: 0;
+}
+
+nav.navbar .cartForm button {
+    background: none;
+    border: none;
+    color: #3665f3;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+nav.navbar .cartForm button:hover {
+    background-color: #f0f0f0;
+}
+
+nav.navbar a:hover {
+    background-color: #f0f0f0;
+}
+
+nav.navbar .profileForm {
+    margin: 0;
+}
+
+nav.navbar .profileForm button {
+    background: none;
+    border: none;
+    color: #3665f3;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+nav.navbar .profileForm button:hover {
+    background-color: #f0f0f0;
+}

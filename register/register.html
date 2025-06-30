@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduEverything - User Registration</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Ensure you can go back to dashboard-->
+    <header class="topbar">
+        <div class="header-cont">
+            <a href="../dashboard.php" class="logo">Everything</a>
+        </div>
+        <div class="labels">
+            <label>Login to your existing account:</label>
+        </div>
+    </header>
+
+    <div class="register">
+        <form method="POST" action="./register.php" onsubmit="return validateForm()">
+            <label for="username">Username: </label> <br>
+            <span id="userNameError" class="error"> </span> 
+            <input type="text" id="username" name="username">
+            <br>
+
+            <label for="name">Name:</label> <br>
+            <span id="nameError" class="error"> </span> 
+            <input type="text" id="name" name="name">
+            <br>
+
+            <label for="surname">Surname:</label> <br>
+            <span id="surnameError" class="error"> </span> 
+            <input type="text" id="surname" name="surname">
+            <br>
+
+            <label for="email">Email:</label> <br>
+            <span id="emailError" class="error"> </span> 
+            <input type="email" id="email" name="email">
+            <br>
+
+            <label for="phoneNr">Phone Number:</label> <br>
+            <span id="phoneNrError" class="error"> </span> 
+            <input type="text" id="phoneNr" name="phoneNr" maxlength="10">
+            <br>
+
+            <label for="birthDate">Birth Date:</label> <br>
+            <span id="birthDateError" class="error"> </span> 
+            <input type="date" id="birthDate" name="birthDate">
+            <br>
+
+            <label for="idNumber">ID Number:</label> <br>
+            <span id="idNumberError" class="error"> </span>
+            <input type="text" id="idNumber" name="idNumber" maxlength="15">
+            <br>
+
+            <label for="gender">Gender:</label> <br>
+            <span id="genderError" class="error"> </span> 
+            <select class="gender-select" name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select> 
+            <br>
+
+            <label for="password">Password:</label> <br>
+            <span id="passwordError" class="error"> </span>
+
+            <input type="password" id="password" name="password" autocomplete="off">
+            
+            <label for="confirmpassword">Confirm Password:</label> <br>
+            <span id="confirmpasswordError" class="error"> </span>
+            <input type="password" id="confirmpassword" name="confirmpassword" autocomplete="off">
+            
+
+            <button type="submit">Register</button>
+            <p>Already have an account? <a href="../login/login.html">Login here</a></p>
+        </form>
+    </div>
+    <script src="./register.js"></script>
+</body>
+</html>

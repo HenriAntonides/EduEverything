@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduEverything - User Login</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Ensure you can go back to dashboard-->
+    <header class="topbar">
+        <div class="header-cont">
+            <a href="../dashboard.php" class="logo">Everything</a>
+        </div>
+        <div class="labels">
+            <label>Login to your existing account:</label>
+        </div>
+    </header>
+        
+    <div class="login">
+        <!--Ensure the input is valid, then validate it against the database -->
+        <form action="./login.php" method="POST" onsubmit="return validateLoginForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"/>
+            <span id="userNameError" class="error"> </span><br>
+ 
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"/>
+            <span id="passwordError" class="error"> </span><br>
+ 
+            <input type="hidden" name="redirect" id="redirectInput"/>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="../register/register.html">Register here</a></p>
+        </form>
+    </div>
+
+    <script>
+        // check to see where it would need to be redirected to
+        const redirect = sessionStorage.getItem("redirectAfterLogin");
+        if (redirect) {
+            document.getElementById("redirectInput").value = redirect;
+            
+            sessionStorage.removeItem("redirectAfterLogin");
+        }
+
+    </script>
+    <script src="./login.js"></script>
+</body>
+</html>

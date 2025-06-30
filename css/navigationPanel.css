@@ -1,0 +1,110 @@
+/* Style for the Navigation Panel */
+.categoryNav {
+    background-color: aqua;
+    border-bottom: 3px solid #000000;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    padding: 0 10px;
+    overflow-x: visible;
+}
+
+.categoryNav ul {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping on small screens */
+    list-style: none;
+    gap: 20px;
+    padding: 10px 0;
+    margin: 0;
+    justify-content: space-around;
+}
+
+.categoryNav li {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.categoryNav > ul > li > a {
+    font-weight: 500;
+    color: #333;
+    padding: 10px 5px;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.categoryNav .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: aqua;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    min-width: 180px;
+    z-index: 1000;
+    border-radius: 4px;
+}
+
+.categoryNav .dropdown li {
+    padding: 8px 20px;
+    white-space: nowrap;
+}
+
+.categoryNav .dropdown li a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.categoryNav li:hover .dropdown {
+    display: block;
+}
+
+.categoryNav li a:hover {
+    color: #0064d2;
+}
+
+/* Desktop hover behavior */
+@media (min-width: 769px) {
+    .categoryNav ul {
+        display: flex;
+        gap: 30px;
+    }
+
+    .categoryNav li {
+        position: relative;
+    }
+
+    .categoryNav .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: aqua;
+        padding: 10px 0;
+        min-width: 180px;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .categoryNav li:hover > .dropdown {
+        display: block;
+    }
+}
+
+/* Mobile click behavior */
+@media (max-width: 768px) {
+    .categoryNav ul {
+        flex-direction: column;
+    }
+
+    .categoryNav .dropdown {
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+    }
+
+    .categoryNav li.active > .dropdown {
+        display: block;
+    }
+}
